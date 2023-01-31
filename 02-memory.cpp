@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     }
   }
   printf("time to write = %f s\n", t.toc());
-  printf("bandwidth = %f GB/s\n", n * repeat * sizeof(double) / 1e9 / t.toc());
+  printf("bandwidth = %f GB/s\n", n * repeat / skip * sizeof(double) / 1e9 / t.toc());
 
   double sum = 0;
   for (long i = 0; i < n; i += skip) sum += x[i];
